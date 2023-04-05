@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:milo/screens/home.dart';
 import 'package:milo/screens/splash.dart';
 import 'package:milo/utils/routes.dart';
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
+      debugShowCheckedModeBanner: false,
       routes: {
         '/' : (context)=> const SplashScreen(),
         MyRoutes.home:(context) => const HomeScreen(),

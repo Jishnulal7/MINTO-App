@@ -3,6 +3,8 @@ import 'package:milo/screens/menu.dart';
 
 
 class TableSelectionScreen extends StatefulWidget {
+  const TableSelectionScreen({super.key});
+
   @override
   _TableSelectionScreenState createState() => _TableSelectionScreenState();
 }

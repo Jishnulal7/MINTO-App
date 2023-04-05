@@ -10,9 +10,9 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
-  List<String> _menuItems = [    'Pasta',    'Pizza',    'Burger',    'Sandwich',    'Salad',    'Fries',    'Chicken',    'Fish',    'Steak',    'Soup',  ];
+  final List<String> _menuItems = [    'Pasta',    'Pizza',    'Burger',    'Sandwich',    'Salad',    'Fries',    'Chicken',    'Fish',    'Steak',    'Soup',  ];
 
-  List<String> _selectedItems = [];
+  final List<String> _selectedItems = [];
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class _MenuScreenState extends State<MenuScreen> {
         title: Text('Table ${widget.tableNumber} Menu'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -46,19 +46,19 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
             ElevatedButton(
-              child: Text('Submit Order'),
+              child: const Text('Submit Order'),
               onPressed: () {
-                if (_selectedItems.length > 0) {
+                if (_selectedItems.isNotEmpty) {
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('Order Submitted!'),
+                        title: const Text('Order Submitted!'),
                         content: Text(
                             'Your order for table ${widget.tableNumber} has been submitted with the following items: \n\n${_selectedItems.join('\n')}'),
                         actions: [
                           TextButton(
-                            child: Text('OK'),
+                            child: const Text('OK'),
                             onPressed: () {
                               Navigator.pop(context);
                               Navigator.pop(context);
@@ -73,12 +73,12 @@ class _MenuScreenState extends State<MenuScreen> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('No Items Selected'),
-                        content: Text(
+                        title: const Text('No Items Selected'),
+                        content: const Text(
                             'Please select at least one item from the menu.'),
                         actions: [
                           TextButton(
-                            child: Text('OK'),
+                            child: const Text('OK'),
                             onPressed: () {
                               Navigator.pop(context);
                             },

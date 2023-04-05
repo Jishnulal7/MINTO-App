@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashScreen(),
         // MyRoutes.login: (context) => const LoginScreen(),
-        MyRoutes.home: (context) => TableSelectionScreen(),
+        MyRoutes.home: (context) => const TableSelectionScreen(),
         // MyRoutes.table:(context) => const TableSelection(),
         MyRoutes.menu: (context) => MenuScreen(
               tableNumber: '',

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:milo/screens/home.dart';
 import 'package:milo/screens/login.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -39,8 +38,6 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
         ),
-        // backgroundColor: Colors.deepPurple,
-       
       ),
     );
   }

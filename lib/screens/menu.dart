@@ -10,7 +10,37 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
-  final List<String> _menuItems = [    'Pasta',    'Pizza',    'Burger',    'Sandwich',    'Salad',    'Fries',    'Chicken',    'Fish',    'Steak',    'Soup',  ];
+  final List<String> _menuItems = [
+    'Broast',
+    'Pizza',
+    'Burger',
+    'Sandwich',
+    'Porotta',
+    'Chicken Curry',
+    'Beef',
+    'Fries',
+    'Chicken Chilli',
+    'Fried Chicken',
+    'Mandhi',
+    'Shawarma',
+    'Biriyani'
+  ];
+  final List<String> _menuPrice = [
+    '₹399',
+    '₹299',
+    '₹99',
+    '₹40',
+    '₹10',
+    '₹110',
+    '₹100',
+    '₹99',
+    '₹150',
+    '₹399',
+    '₹499',
+    '₹399',
+    '₹99',
+    '₹199',
+  ];
 
   final List<String> _selectedItems = [];
 
@@ -18,7 +48,10 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('Table ${widget.tableNumber} Menu'),
+        backgroundColor: Colors.deepPurple,
+        
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -30,6 +63,7 @@ class _MenuScreenState extends State<MenuScreen> {
                 itemCount: _menuItems.length,
                 itemBuilder: (BuildContext context, int index) {
                   return CheckboxListTile(
+                    subtitle: Text(_menuPrice[index]),
                     title: Text(_menuItems[index]),
                     value: _selectedItems.contains(_menuItems[index]),
                     onChanged: (bool? value) {
@@ -46,7 +80,12 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
             ElevatedButton(
-              child: const Text('Submit Order'),
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
+              child: const Text(
+                'Submit Order',
+                style: TextStyle(color: Colors.white),
+              ),
               onPressed: () {
                 if (_selectedItems.isNotEmpty) {
                   showDialog(

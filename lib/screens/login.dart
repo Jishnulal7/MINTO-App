@@ -13,7 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   bool onButtonClick = false;
 
-  GlobalKey<FormState> _formKey = GlobalKey();
+  final GlobalKey<FormState> _formKey = GlobalKey();
 
   moveToHome(BuildContext context) async {
     if (_formKey.currentState!.validate()) {

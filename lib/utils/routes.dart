@@ -3,5 +3,4 @@ class MyRoutes {
   static String home = '/home';
   static String splash = '/splash';
   static String menu = '/menu';
-  // static String table = '/table';
 }

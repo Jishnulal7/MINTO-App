@@ -20,13 +20,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.home,
+      initialRoute: MyRoutes.splash,
       routes: {
         '/': (context) => const SplashScreen(),
-        // MyRoutes.login: (context) => const LoginScreen(),
+        MyRoutes.login: (context) => const LoginScreen(),
         MyRoutes.home: (context) => const TableSelectionScreen(),
-        // MyRoutes.table:(context) => const TableSelection(),
-        MyRoutes.menu: (context) => MenuScreen(
+        MyRoutes.menu: (context) => const MenuScreen(
               tableNumber: '',
             ),
       },

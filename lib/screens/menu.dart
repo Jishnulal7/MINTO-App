@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MenuScreen extends StatefulWidget {
   final String tableNumber;
 
-  MenuScreen({required this.tableNumber});
+  const MenuScreen({super.key, required this.tableNumber});
 
   @override
   _MenuScreenState createState() => _MenuScreenState();

@@ -1,6 +1,6 @@
 # minto
 
-A new Flutter project.
+A new Flutter project for booking tables in Restaurant.
 
 ## Getting Started
 

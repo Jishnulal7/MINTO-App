@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.splash,
+      // initialRoute: MyRoutes.home,
       routes: {
         '/': (context) => const SplashScreen(),
         MyRoutes.login: (context) => const LoginScreen(),

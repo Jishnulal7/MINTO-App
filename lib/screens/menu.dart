@@ -51,7 +51,6 @@ class _MenuScreenState extends State<MenuScreen> {
         centerTitle: true,
         title: Text('Table ${widget.tableNumber} Menu'),
         backgroundColor: Colors.deepPurple,
-        
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -94,7 +93,8 @@ class _MenuScreenState extends State<MenuScreen> {
                       return AlertDialog(
                         title: const Text('Order Submitted!'),
                         content: Text(
-                            'Your order for table ${widget.tableNumber} has been submitted with the following items: \n\n${_selectedItems.join('\n')}'),
+                          'Your order for table ${widget.tableNumber} has been submitted with the following items: \n\n${_selectedItems.join('\n')}',
+                        ),
                         actions: [
                           TextButton(
                             child: const Text('OK'),
@@ -119,7 +119,7 @@ class _MenuScreenState extends State<MenuScreen> {
                           TextButton(
                             child: const Text('OK'),
                             onPressed: () {
-                              Navigator.pop(context);
+                              Navigator.pop(context, true);
                             },
                           ),
                         ],

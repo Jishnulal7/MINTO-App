@@ -10,7 +10,7 @@ class TableSelectionScreen extends StatefulWidget {
 }
 
 class _TableSelectionScreenState extends State<TableSelectionScreen> {
-  List<String> tables = [
+  List<dynamic> tables = [
     'Table 1',
     'Table 2',
     'Table 3',
@@ -29,12 +29,14 @@ class _TableSelectionScreenState extends State<TableSelectionScreen> {
     false,
     false,
     false,
-    false,
+    true,
     false,
     false,
     false,
     false
   ];
+
+  bool orderCompleted = false;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,7 @@ class _TableSelectionScreenState extends State<TableSelectionScreen> {
         actions: [
           IconButton(
               onPressed: () {
-                 Navigator.pop(context);
+                Navigator.pop(context);
               },
               icon: const Icon(Icons.logout))
         ],
@@ -71,6 +73,7 @@ class _TableSelectionScreenState extends State<TableSelectionScreen> {
                   ),
                 );
               }
+
             },
             child: Card(
               color: isTableOccupied[index] ? Colors.red : Colors.green,
